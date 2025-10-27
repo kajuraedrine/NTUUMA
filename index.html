@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NTUUMA Agro Exports — Premium Ugandan Produce</title>
+  <meta name="description" content="NTUUMA Agro Exports supplies premium Ugandan fruits, tubers, vanilla beans and cocoa powder with reliable, year-round sourcing." />
+  <meta name="theme-color" content="#0a472e" />
+  <style>
+    :root{
+      --bg:#f7faf8;--bg-alt:#f1f6f3;--text:#0a0f0d;--muted:#5c6b65;
+      --brand-1:#0a472e;--brand-2:#1f7a4c;--card:#fff;--border:#e5eee8;
+      --shadow:0 10px 30px rgba(10,71,46,.08);--radius:14px
+    }
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img{max-width:100%;display:block}.container{width:min(1100px,92%);margin-inline:auto}
+    .skip{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}.skip:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:#fff;border:1px solid var(--border)}
+    .site-header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--border);backdrop-filter:blur(6px)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:.6rem 0}
+    .logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text);font-weight:700;letter-spacing:.6px}
+    .menu{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    .menu a{display:block;padding:.6rem .9rem;border-radius:10px;text-decoration:none;color:var(--text)}
+    .menu a:hover{background:var(--bg-alt)}.menu-toggle{display:none}
+    @media (max-width:760px){.menu-toggle{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .8rem;border:1px solid var(--border);border-radius:10px;background:#fff}
+      .menu{position:absolute;right:4%;top:64px;flex-direction:column;background:#fff;padding:.6rem;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);display:none}
+      .menu.open{display:flex}}
+    .hero{background:linear-gradient(180deg,#f0f7f3,#ffffff)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;padding:clamp(2rem,4vw,4rem) 0}
+    .hero-copy h1{font-size:clamp(1.9rem,2.8vw,3rem);line-height:1.1;margin:.4rem 0 1rem}
+    .hero-copy p{font-size:1.1rem;color:var(--muted)}
+    .cta-row{display:flex;gap:1rem;margin:1rem 0}
+    .btn{display:inline-block;padding:.9rem 1.1rem;border-radius:12px;text-decoration:none;border:1px solid var(--brand-2)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));color:#fff;border-color:transparent}
+    .btn.ghost{background:#fff;color:var(--brand-1)}
+    .badges{display:flex;gap:.8rem;padding:0;margin:1rem 0 0;list-style:none;flex-wrap:wrap}
+    .badges li{font-size:.95rem;padding:.4rem .6rem;border:1px dashed var(--border);border-radius:10px;color:#2a3a33;background:#fff}
+    .hero-art{align-self:center;justify-self:center;width:100%;max-width:420px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.06))}
+    .section{padding:clamp(2rem,3.5vw,4rem) 0}.section.alt{background:var(--bg-alt)}
+    .section-head{margin-bottom:1.2rem}.section-head h2{font-size:clamp(1.4rem,2.2vw,2rem);margin:.2rem 0 .6rem}
+    .section-head .lead{color:var(--muted);max-width:70ch}
+    .grid.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .card .emoji{font-size:2rem}.card h3{margin:.2rem 0 .4rem}.card p{margin:.2rem 0 .6rem;color:var(--text)}
+    .card .meta{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.6rem;color:var(--muted)}
+    .card .meta li{background:#fbfdfc;border:1px solid var(--border);border-radius:999px;padding:.25rem .6rem;font-size:.9rem}
+    .export-note{margin-top:1rem;padding:1rem;border:1px dashed var(--border);border-radius:12px;background:#fff;color:#2a3a33}
+    .quality-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .q-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .timeline article{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+    .contact-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+    .contact-form{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .contact-form label{display:block;margin:.6rem 0 .25rem;font-weight:600}
+    .contact-form input,.contact-form textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--border);border-radius:10px;background:#fff}
+    .contact-form .actions{display:flex;gap:.8rem;margin-top:1rem}
+    .contact-aside{padding:1rem;border:1px solid var(--border);border-radius:var(--radius);background:#fbfdfc}
+    .small{font-size:.9rem;color:var(--muted)}
+    .site-footer{border-top:1px solid var(--border);background:#fff}
+    .f-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+    .f-wrap .brand{display:flex;flex-direction:column;font-weight:700}
+    .f-wrap nav ul{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+    .f-wrap .legal{display:flex;gap:.8rem;color:var(--muted)}
+    @media (max-width:960px){.hero-inner{grid-template-columns:1fr}.contact-wrap{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home" aria-label="NTUUMA home">
+        <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#0a472e"/>
+              <stop offset="1" stop-color="#1f7a4c"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="64" height="64" rx="12" fill="url(#g)"></rect>
+          <text x="50%" y="56%" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="36" fill="#fff">N</text>
+        </svg>
+        <span>NTUUMA</span>
+      </a>
+      <nav aria-label="Primary">
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="siteMenu">Menu</button>
+        <ul id="siteMenu" class="menu">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#quality">Quality</a></li>
+          <li><a href="#regions">Regions & Seasons</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Premium Ugandan Produce for Global Buyers</h1>
+          <p>From sun-ripe mangoes and pineapples to hand-selected vanilla beans and fine cocoa powder, we deliver consistent quality with reliable sourcing.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#products">Explore Products</a>
+            <a class="btn ghost" href="./NTUUMA_PRODUCT_LIST.pdf" target="_blank" rel="noopener">Download Product List (PDF)</a>
+          </div>
+          <ul class="badges" role="list">
+            <li>Year-round availability</li>
+            <li>Export-ready packing</li>
+            <li>Responsive customer service</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <!-- Inline decorative SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Decorative pattern">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1f7a4c"/><stop offset="1" stop-color="#94d3ac"/></linearGradient>
+              <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#dff4e7"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+            </defs>
+            <rect width="480" height="360" fill="url(#g2)"/>
+            <circle cx="80" cy="80" r="60" fill="url(#g1)" opacity=".25"/>
+            <circle cx="400" cy="120" r="90" fill="url(#g1)" opacity=".2"/>
+            <rect x="60" y="220" width="360" height="90" rx="20" fill="url(#g1)" opacity=".15"/>
+            <g opacity=".9">
+              <path d="M120,260c60-80,180-80,240,0" fill="none" stroke="#1f7a4c" stroke-width="6" stroke-linecap="round" stroke-dasharray="6 12"/>
+              <circle cx="120" cy="260" r="8" fill="#1f7a4c"/>
+              <circle cx="360" cy="260" r="8" fill="#1f7a4c"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Products</h2>
+          <p class="lead">Carefully sourced from Uganda’s most productive regions, packed to export specifications, and supported by agile logistics.</p>
+        </header>
+
+        <div class="grid products">
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🥭</div>
+            <h3>Mango</h3>
+            <p>Available year-round due to staggered production. Export varieties include Apple, Tommy Atkins, Zillate, Kate, Kent and Ddoodo. <strong>Pack size:</strong> ~4&nbsp;kg/carton.</p>
+            <ul class="meta" role="list">
+              <li>Regions: Central, Eastern, Northern</li>
+              <li>Availability: All year</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🍍</div>
+            <h3>Pineapple</h3>
+            <p>Sweet with tempered tartness. Export varieties: Smooth Cayenne and Queen cultivars. <strong>Pack size:</strong> 6 pcs/carton (~12&nbsp;kg).</p>
+            <ul class="meta" role="list">
+              <li>Regions: Eastern, Central</li>
+              <li>Availability: All year (alternating peaks)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🥑</div>
+            <h3>Avocado</h3>
+            <p>Grafted hybrids, round/oval; green skin that turns purple when ripe, with golden-green flesh and bold-mellow flavors. <strong>Pack size:</strong> ~4&nbsp;kg/carton.</p>
+            <ul class="meta" role="list">
+              <li>Region: Central</li>
+              <li>Peak: Apr–Jun; Low: Sep–Dec</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🌱</div>
+            <h3>Cassava</h3>
+            <p>Starchy tuber cultivated across Uganda throughout the year. <strong>Pack size:</strong> ~10&nbsp;kg/carton.</p>
+            <ul class="meta" role="list">
+              <li>Availability: Year-round</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🥔</div>
+            <h3>Irish Potatoes</h3>
+            <p>Thriving in Uganda’s highlands; a beloved staple. <strong>Pack size:</strong> ~10&nbsp;kg/carton.</p>
+            <ul class="meta" role="list">
+              <li>Regions: Kabale, Kisoro, Mbale</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🌼</div>
+            <h3>Vanilla Beans</h3>
+            <p>Distinctively rich flavor, sweet aroma, high vanillin content. Hand-selected and processed with sustainable growing, harvesting and curing practices.</p>
+            <ul class="meta" role="list">
+              <li>Applications: gourmet, extract, confectionery, perfumery</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="emoji" aria-hidden="true">🍫</div>
+            <h3>Ugandan Cocoa Powder</h3>
+            <p>Rich, deep cocoa taste with hints of fruit and nuts, grown in fertile Ugandan soils; sought by global manufacturers.</p>
+            <ul class="meta" role="list">
+              <li>Use: chocolate, baking, beverages</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="export-note">
+          <p><strong>Export readiness:</strong> All products are graded and packed to order with buyer-specific labeling and logistics coordination.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Quality & Handling</h2>
+        </header>
+        <div class="quality-grid">
+          <div class="q-card">
+            <h3>Careful Selection</h3>
+            <p>Produce is hand-selected at optimal maturity and inspected against export specs for size and appearance.</p>
+          </div>
+          <div class="q-card">
+            <h3>Sustainable Practices</h3>
+            <p>Vanilla beans follow responsible growing, harvesting and curing practices that respect the environment.</p>
+          </div>
+          <div class="q-card">
+            <h3>Cold-Chain Aware</h3>
+            <p>Perishables are packed for freshness and routed swiftly to maintain texture, aroma and shelf life.</p>
+          </div>
+          <div class="q-card">
+            <h3>Clear Documentation</h3>
+            <p>Commercial invoice, packing list and any required phytosanitary or origin certificates arranged with the shipment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regions" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Regions & Seasons</h2>
+          <p class="lead">Uganda’s diverse micro-climates enable steady supply and staggered peak seasons across regions.</p>
+        </header>
+        <div class="timeline">
+          <article><h3>Mango</h3><p>Central, Eastern, Northern; year-round supply from staggered production.</p></article>
+          <article><h3>Pineapple</h3><p>Eastern & Central; alternating peak seasons deliver continuous availability.</p></article>
+          <article><h3>Avocado</h3><p>Central region; peak Apr–Jun, lower supply Sep–Dec.</p></article>
+          <article><h3>Irish Potatoes</h3><p>Highland areas: Kabale, Kisoro, Mbale.</p></article>
+          <article><h3>Cassava</h3><p>Cultivated throughout the country, year-round.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Contact & Trade Enquiries</h2>
+          <p class="lead">Tell us about your specs and volumes. We’ll reply with availability, samples and offers.</p>
+        </header>
+        <div class="contact-wrap">
+          <form class="contact-form" id="contactForm" action="mailto:sales@ntuuma.example" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" />
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" placeholder="Company or organization" />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="What products, volumes and timeline?"></textarea>
+            <div class="actions">
+              <button class="btn primary" type="submit">Send enquiry</button>
+              <a class="btn ghost" href="./NTUUMA_PRODUCT_LIST.pdf" target="_blank" rel="noopener">View PDF</a>
+            </div>
+          </form>
+          <aside class="contact-aside">
+            <h3>Trade Details</h3>
+            <ul>
+              <li>Incoterms: FOB / CFR / CIF</li>
+              <li>Payment: T/T, LC (irrevocable)</li>
+              <li>Packing: Cartons with buyer labeling</li>
+              <li>Lead times: season-dependent</li>
+            </ul>
+            <p class="small">To use a real web form, replace the form action with your provider (e.g., Formspree, Netlify Forms) after deployment.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container f-wrap">
+      <div class="brand"><strong>NTUUMA</strong><span>Agro Exports</span></div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#quality">Quality</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./NTUUMA_PRODUCT_LIST.pdf" target="_blank" rel="noopener">Product PDF</a></li>
+        </ul>
+      </nav>
+      <div class="legal small"><span>&copy; 2025 NTUUMA Agro Exports</span><span>All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('menuToggle');const menu=document.getElementById('siteMenu');
+    if(toggle&&menu){toggle.addEventListener('click',()=>{const e=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!e));menu.classList.toggle('open')})}
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href').slice(1),el=document.getElementById(id);if(!el)return;e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});menu?.classList.remove('open');toggle?.setAttribute('aria-expanded','false')})});
+    const form=document.getElementById('contactForm');if(form){form.addEventListener('submit',e=>{const m=form.querySelector('#message');if(m&&m.value.trim().length<6){e.preventDefault();alert('Please include a bit more detail in your enquiry so our team can respond precisely.');m.focus()}})}
+  </script>
+</body>
+</html>
